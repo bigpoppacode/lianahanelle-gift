@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liana Hanelle — Soul · Spirit · Alignment</title>
+  <meta name="description" content="Liana Hanelle (@lianahanelle) — Relational Intelligence Coach, Spiritual Director, and Certified Holistic Health Practitioner helping women break toxic cycles, deepen their relationship with God, and transform their lives.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <meta property="og:title" content="Liana Hanelle — Soul · Spirit · Alignment">
+  <meta property="og:description" content="Relational Intelligence Coach, Spiritual Director, and Certified Holistic Health Practitioner helping women break toxic cycles and transform their lives—emotionally, spiritually, and holistically.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta property="og:image:alt" content="Liana Hanelle — Soul · Spirit · Alignment">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Liana Hanelle — Soul · Spirit · Alignment">
+  <meta name="twitter:description" content="Relational Intelligence Coach, Spiritual Director, and Certified Holistic Health Practitioner. Break toxic cycles, deepen your faith, transform your life.">
+  <meta name="twitter:image" content="images/og-image.png">
+
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__icon">🌿</div>
+    <div class="loader__text">LIANA HANELLE</div>
+    <div class="loader__bar"><div class="loader__fill"></div></div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="theme-song" preload="auto" loop>
+    <source src="audio/Holistic_Harmony_Favorite_1.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Mute Button -->
+  <button id="mute-toggle" class="mute-btn" aria-label="Mute/Unmute music" title="Toggle Music">
+    <span class="mute-icon">🌿</span>
+  </button>
+
+  <!-- Music Prompt -->
+  <div id="music-prompt" class="music-prompt hidden">
+    <div class="music-prompt-content">
+      <div class="music-prompt-icon">🌿</div>
+      <p>tap to enable the soundtrack</p>
+      <button id="enable-music-btn" class="enable-music-btn">PLAY MUSIC</button>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__icon">🌿</span>
+        <span class="nav__name">LH</span>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="#explore" class="nav__link">Explore</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#connect" class="nav__link">Connect</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__inner">
+      <a href="#explore" class="mobile-menu__link" data-index="01">Explore</a>
+      <a href="#about" class="mobile-menu__link" data-index="02">About</a>
+      <a href="#connect" class="mobile-menu__link" data-index="03">Connect</a>
+      <div class="mobile-menu__socials">
+        <a href="https://instagram.com/lianahanelle" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/@lianahanelle" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.lianahanelle.com/" target="_blank" rel="noopener" aria-label="Website"><i class="fas fa-globe"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+        <div class="hero__grain"></div>
+      </div>
+      <div class="hero__content">
+        <div class="hero__split">
+          <div class="hero__text">
+            <div class="hero__icon reveal" data-delay="0.3">🌿</div>
+            <h1 class="hero__title">
+              <span class="hero__line reveal" data-delay="0.5">LIANA</span>
+              <span class="hero__line hero__line--accent reveal" data-delay="0.7">HANELLE</span>
+            </h1>
+            <p class="hero__tagline reveal" data-delay="0.9">Soul&ensp;&middot;&ensp;Spirit&ensp;&middot;&ensp;Alignment</p>
+            <div class="hero__cta reveal" data-delay="1.1">
+              <a href="#explore" class="btn btn--primary">Begin Your Transformation</a>
+            </div>
+          </div>
+          <div class="hero__image reveal" data-delay="0.6">
+            <div class="hero__image-glow"></div>
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/hero-cutout-mobile.png">
+              <img src="images/hero-cutout.png" alt="Liana Hanelle" class="hero__portrait" loading="eager">
+            </picture>
+          </div>
+        </div>
+        <div class="hero__stats reveal" data-delay="1.3">
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="17000">0</span>
+            <span class="hero__stat-label">Community</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="4">0</span><span class="hero__stat-suffix">+</span>
+            <span class="hero__stat-label">Platforms</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-icon">🌿</span>
+            <span class="hero__stat-label">Wellness Maven</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll reveal" data-delay="1.5">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- EXPLORE -->
+    <section class="explore" id="explore">
+      <div class="section__container">
+        <div class="section__header">
+          <span class="section__number reveal">01</span>
+          <h2 class="section__title reveal">Explore</h2>
+          <p class="section__subtitle reveal">Soul work that transforms from the inside out.</p>
+        </div>
+        <div class="explore__grid">
+
+          <a href="https://www.lianahanelle.com/services-store/p/basic-service-dar7y" target="_blank" rel="noopener" class="link-card link-card--featured reveal">
+            <div class="link-card__glow"></div>
+            <div class="link-card__icon"><i class="fas fa-heart"></i></div>
+            <div class="link-card__content">
+              <h3 class="link-card__title">Relational Intelligence Consultation</h3>
+              <p class="link-card__desc">60-minute clarity session for emotional patterns and spiritual alignment &mdash; $50</p>
+            </div>
+            <div class="link-card__arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://www.lianahanelle.com/services-store/p/intermediate-service-gw3f3" target="_blank" rel="noopener" class="link-card link-card--featured reveal">
+            <div class="link-card__glow"></div>
+            <div class="link-card__icon"><i class="fas fa-leaf"></i></div>
+            <div class="link-card__content">
+              <h3 class="link-card__title">Nutrition & Wellness Coaching</h3>
+              <p class="link-card__desc">Holistic health session for plant-based nutrition and detox &mdash; $50</p>
+            </div>
+            <div class="link-card__arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://www.lianahanelle.com/services-store/p/advanced-service-n28cl" target="_blank" rel="noopener" class="link-card link-card--featured reveal">
+            <div class="link-card__glow"></div>
+            <div class="link-card__icon"><i class="fas fa-dove"></i></div>
+            <div class="link-card__content">
+              <h3 class="link-card__title">Spiritual Direction Session</h3>
+              <p class="link-card__desc">Discern God's voice and navigate life with biblical wisdom &mdash; $50</p>
+            </div>
+            <div class="link-card__arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://www.lianahanelle.com/" target="_blank" rel="noopener" class="link-card link-card--featured reveal">
+            <div class="link-card__glow"></div>
+            <div class="link-card__icon"><i class="fas fa-spa"></i></div>
+            <div class="link-card__content">
+              <h3 class="link-card__title">8-Week Relationship Detox Program</h3>
+              <p class="link-card__desc">Transformational journey to break toxic cycles and heal emotionally</p>
+            </div>
+            <div class="link-card__arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://instagram.com/lianahanelle" target="_blank" rel="noopener" class="link-card reveal">
+            <div class="link-card__icon"><i class="fab fa-instagram"></i></div>
+            <div class="link-card__content">
+              <h3 class="link-card__title">Instagram</h3>
+              <p class="link-card__desc">@lianahanelle &mdash; daily soul alignment and wellness inspiration</p>
+            </div>
+            <div class="link-card__arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://tiktok.com/@lianahanelle" target="_blank" rel="noopener" class="link-card reveal">
+            <div class="link-card__icon"><i class="fab fa-tiktok"></i></div>
+            <div class="link-card__content">
+              <h3 class="link-card__title">TikTok</h3>
+              <p class="link-card__desc">@lianahanelle &mdash; spiritual growth and holistic wellness content</p>
+            </div>
+            <div class="link-card__arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://linktr.ee/lianahanelle" target="_blank" rel="noopener" class="link-card reveal">
+            <div class="link-card__icon"><i class="fas fa-link"></i></div>
+            <div class="link-card__content">
+              <h3 class="link-card__title">All Resources</h3>
+              <p class="link-card__desc">Access free guides, challenges, and wellness products</p>
+            </div>
+            <div class="link-card__arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="section__container">
+        <div class="about__layout">
+          <div class="about__visual reveal">
+            <div class="about__image-frame">
+              <img src="images/lianahanelle-9.jpg" alt="Liana Hanelle portrait" class="about__photo" loading="lazy">
+              <div class="about__image-border"></div>
+            </div>
+          </div>
+          <div class="about__text">
+            <span class="section__number reveal">02</span>
+            <h2 class="section__title reveal">About</h2>
+            <div class="about__bio">
+              <p class="reveal">Liana Hanelle is a Relational Intelligence Coach, Spiritual Director, and Certified Holistic Health Practitioner helping women break toxic cycles, deepen their relationship with God, and transform their lives &mdash; emotionally, spiritually, and holistically.</p>
+              <p class="reveal">Her work is rooted in the understanding that healing is never one-dimensional. Through her signature <em>8-Week Relationship Detox Program</em> and personalized sessions, Liana guides women through intentional separation from toxic patterns, emotional healing, and deep spiritual reconnection. Her clients learn to recognize God's voice, build relational intelligence, and step into the peace, clarity, and alignment they've been searching for.</p>
+              <p class="reveal">Mind. Body. Spirit. Relationships.</p>
+            </div>
+            <div class="about__cta reveal">
+              <a href="https://www.lianahanelle.com/" target="_blank" rel="noopener" class="btn btn--primary">Start Your Healing</a>
+              <a href="https://instagram.com/lianahanelle" target="_blank" rel="noopener" class="btn btn--ghost">Follow the Journey</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL-BLEED QUOTE BREAK -->
+    <section class="quote-break">
+      <div class="quote-break__overlay"></div>
+      <div class="quote-break__content reveal">
+        <span>🌿</span>
+        <p>your relationships with God, yourself, and others determine the quality of your entire life.</p>
+      </div>
+    </section>
+
+    <!-- CONNECT -->
+    <section class="connect" id="connect">
+      <div class="section__container">
+        <div class="section__header section__header--center">
+          <span class="section__number reveal">03</span>
+          <h2 class="section__title section__title--large reveal">Let's<br>Connect</h2>
+          <p class="section__subtitle reveal">Find me everywhere that matters.</p>
+        </div>
+        <div class="connect__grid">
+          <a href="https://instagram.com/lianahanelle" target="_blank" rel="noopener" class="connect-card reveal">
+            <i class="fab fa-instagram connect-card__icon"></i>
+            <span class="connect-card__name">Instagram</span>
+            <span class="connect-card__handle">@lianahanelle</span>
+          </a>
+          <a href="https://www.lianahanelle.com/" target="_blank" rel="noopener" class="connect-card reveal">
+            <i class="fas fa-globe connect-card__icon"></i>
+            <span class="connect-card__name">Website</span>
+            <span class="connect-card__handle">lianahanelle.com</span>
+          </a>
+          <a href="https://tiktok.com/@lianahanelle" target="_blank" rel="noopener" class="connect-card reveal">
+            <i class="fab fa-tiktok connect-card__icon"></i>
+            <span class="connect-card__name">TikTok</span>
+            <span class="connect-card__handle">@lianahanelle</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>LIANA HANELLE</span><span>🌿</span>
+        <span>SOUL</span><span>🌿</span>
+        <span>SPIRIT</span><span>🌿</span>
+        <span>ALIGNMENT</span><span>🌿</span>
+        <span>LIANA HANELLE</span><span>🌿</span>
+        <span>SOUL</span><span>🌿</span>
+        <span>SPIRIT</span><span>🌿</span>
+        <span>ALIGNMENT</span><span>🌿</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__icon">🌿</span>
+          <span class="footer__name">LIANA HANELLE</span>
+        </div>
+        <div class="footer__socials">
+          <a href="https://instagram.com/lianahanelle" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com/@lianahanelle" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.lianahanelle.com/" target="_blank" rel="noopener" aria-label="Website"><i class="fas fa-globe"></i></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Liana Hanelle. All rights reserved.</p>
+        <p class="footer__credit">Crafted with 🌿 by <a href="https://bigpoppacode.io" target="_blank" rel="noopener">@bigpoppacode</a></p>
+      </div>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

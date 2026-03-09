@@ -1,0 +1,15 @@
+{
+  "name": "liana-hanelle",
+  "version": "1.0.0",
+  "description": "Premium dark luxury website for Liana Hanelle — Relational Intelligence Coach, Spiritual Director, and Holistic Health Practitioner",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "keywords": [],
+  "author": "bigpoppacode",
+  "license": "UNLICENSED"
+}
