@@ -325,7 +325,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* Hero Image */
 .hero__image {
   position: relative; flex-shrink: 0;
-  width: 85%;
+  width: 55%;
 }
 .hero__image-glow {
   position: absolute; inset: -20%; border-radius: 50%;
