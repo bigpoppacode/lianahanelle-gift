@@ -80,12 +80,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ---------- Mute Button ---------- */
 .mute-btn {
-  position: fixed; top: 20px; right: 20px; z-index: 9998;
+  position: fixed; top: 24px; right: 48px; z-index: 9998;
   background: var(--emerald); border: none; border-radius: 50%;
   width: 52px; height: 52px; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   font-size: 22px;
-  transition: transform 0.3s var(--ease-out), background 0.3s, opacity 0.4s;
+  transition: transform 0.3s var(--ease-out), background 0.3s, opacity 0.4s, top 0.4s, right 0.4s;
   box-shadow: 0 4px 24px var(--emerald-glow);
   animation: mutePulse 2.5s ease-in-out infinite;
   opacity: 0; visibility: hidden;
@@ -93,6 +93,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .mute-btn.active { opacity: 1; visibility: visible; }
 .mute-btn:hover { transform: scale(1.15) rotate(8deg); background: var(--emerald-light); animation: none; }
 .mute-btn.muted { background: var(--bg-card); border: 1px solid var(--border); box-shadow: none; animation: none; }
+.nav.scrolled ~ .mute-btn { top: 16px; right: 48px; }
 @keyframes mutePulse {
   0%, 100% { box-shadow: 0 4px 24px var(--emerald-glow); }
   50% { box-shadow: 0 4px 40px rgba(46, 204, 113, 0.45); }
@@ -136,7 +137,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 @media (max-width: 767px) {
-  .mute-btn { width: 44px; height: 44px; font-size: 18px; top: 16px; right: 16px; }
+  .mute-btn { width: 44px; height: 44px; font-size: 18px; top: 16px; right: 24px; }
+  .nav.scrolled ~ .mute-btn { top: 12px; right: 24px; }
 }
 
 /* ---------- Custom Cursor ---------- */
@@ -171,8 +173,25 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 16px 48px;
   border-bottom: 1px solid var(--border);
 }
-.nav__inner { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.nav__inner { 
+  max-width: 1400px; margin: 0 auto; 
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+}
+.nav__toggle {
+  justify-self: start;
+  width: 32px; height: 32px; position: relative;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  cursor: pointer; z-index: 1002;
+}
+.nav__toggle span {
+  display: block; width: 22px; height: 2px; background: var(--emerald);
+  transition: all 0.3s var(--ease-out);
+}
+.nav__toggle:hover span { background: var(--emerald-light); }
+.nav__toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav__toggle.active span:nth-child(2) { transform: translateY(0) rotate(-45deg); }
 .nav__logo {
+  justify-self: center;
   display: flex; align-items: center; gap: 8px;
   font-family: var(--font-heading); font-weight: 600; font-size: 20px;
   letter-spacing: 0.05em; color: var(--white); transition: opacity 0.3s;
@@ -193,21 +212,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav__link:hover { color: var(--emerald); }
 .nav__link:hover::after { width: 100%; }
 
-@media (min-width: 768px) {
-  .nav__links { display: flex; }
-  .nav__toggle { display: none; }
+@media (max-width: 767px) {
+  .nav { padding: 16px 24px; }
+  .nav.scrolled { padding: 12px 24px; }
 }
-
-.nav__toggle {
-  width: 32px; height: 24px; position: relative;
-  display: flex; flex-direction: column; justify-content: center; gap: 8px; z-index: 1001;
-}
-.nav__toggle span {
-  display: block; width: 100%; height: 1.5px; background: var(--white);
-  transition: transform 0.4s var(--ease-out), opacity 0.3s; transform-origin: center;
-}
-.nav__toggle.active span:first-child { transform: translateY(4.75px) rotate(45deg); }
-.nav__toggle.active span:last-child { transform: translateY(-4.75px) rotate(-45deg); }
 
 /* ---------- Mobile Menu ---------- */
 .mobile-menu {
